@@ -17,6 +17,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+
+    - name: Cache stack dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.stack
+          .stack-work
+        key: ${{ runner.os }}-stack-${{ hashFiles('**/stack.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-stack-
+      
     - name: Set up GHC
       uses: actions/setup-haskell@v1
       with:
