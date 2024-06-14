@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
     - name: Set up GHC
-    - uses: actions/setup-haskell@v1
+      uses: actions/setup-haskell@v1
       with:
         ghc-version: '8.10.4'
     - name: Install dependencies
