@@ -20,7 +20,7 @@ jobs:
     - name: Set up GHC
       uses: actions/setup-haskell@v1
       with:
-        ghc-version: '8.10.4'
+        ghc-version: '8.10.3'
     - name: Install dependencies
       run: stack setup
     - name: Build
