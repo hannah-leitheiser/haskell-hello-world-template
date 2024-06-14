@@ -27,6 +27,13 @@ jobs:
         key: ${{ runner.os }}-stack-${{ hashFiles('**/stack.yaml') }}
         restore-keys: |
           ${{ runner.os }}-stack-
+
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
       
     - name: Set up GHC
       uses: actions/setup-haskell@v1
