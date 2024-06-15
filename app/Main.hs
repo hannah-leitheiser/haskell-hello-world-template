@@ -1,6 +1,9 @@
 module Main (main) where
 
-import Lib
+import Data.I18n (loadTranslations, translate)
+import System.Environment (getEnv)
+import Data.Text (Text, unpack)
 
 main :: IO ()
-main = someFunc
+main = do
+  putStrLn $ "Hello World!"
