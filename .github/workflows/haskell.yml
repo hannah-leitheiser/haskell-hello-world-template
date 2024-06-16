@@ -28,7 +28,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-stack-
 
-
     - name: Run Super-Linter
       uses: github/super-linter@v4
       env: 
@@ -39,9 +38,15 @@ jobs:
       uses: actions/setup-haskell@v1
       with:
         ghc-version: '8.10.1'
+        
     - name: Install dependencies
       run: stack setup
+      
     - name: Build
       run: stack build
+
+    - name: Run Program
+      run: stack exec haskell-hello-world-template-exe
+
     - name: test
       run: stack test
