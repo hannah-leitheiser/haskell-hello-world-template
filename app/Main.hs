@@ -7,5 +7,5 @@ main = do
   let localeDir = "locale"
   
   (l10n, _) <- getL10n localeDir
-  let message = T.unpack ( localize l10n (Locale (T.pack "en")) (gettext "hello world") )
+  let message = T.unpack ( localize l10n (Locale (T.pack "en")) (gettext (T.pack "hello world") ) )
   putStrLn (message )
