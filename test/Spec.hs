@@ -6,7 +6,7 @@ import qualified HelloWorldSpec
 main :: IO ()
 main = do
   testSpecs <- testSpec "MyTestSuite" $ do
-    GreetWorldSpec.spec
+    HelloWorldSpec.spec
     -- Add more specs from other modules if needed
     
   defaultMain testSpecs
