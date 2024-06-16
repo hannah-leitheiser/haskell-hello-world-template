@@ -2,6 +2,11 @@ module HelloWorld
     ( greetWorld
     ) where
 
+import Data.Text.I18n
+import Data.Text.I18n.Po
+import qualified Data.Text as T
+import System.Environment (lookupEnv)
+
 greetWorld :: IO ()
 greetWorld = do
   let localeDir = "resources/locale"
