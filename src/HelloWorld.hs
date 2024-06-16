@@ -9,7 +9,7 @@ import System.Environment (lookupEnv)
 
 greetWorld :: String -> IO String
 greetWorld locale = do
-  let localeDir = T.pack "resources/locale"
+  let localeDir = "resources/locale"
   (l10n, _) <- getL10n localeDir
   let message = T.unpack (localize l10n (Locale (T.pack locale)) (gettext (T.pack "hello world")))
   return message
