@@ -3,8 +3,8 @@ import Data.Text.I18n.Po
 
 main :: IO ()
 main = do
-  let localeDir = "test/locale"
+  let localeDir = "locale"
   
   (l10n, _) <- getL10n localeDir
   let message = localize l10n (Locale "en") (gettext "hello world")
-  putLnStr message
+  putStrLn message
