@@ -2,7 +2,7 @@ module GreetWorldSpec (spec) where
 
 import Test.Hspec
 
-import qualified GreetWorld
+import qualified HelloWorld
 
 spec :: Spec
 spec = describe "GreetWorld" $ do
