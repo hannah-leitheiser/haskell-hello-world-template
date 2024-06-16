@@ -1,5 +1,7 @@
 # Translation file.
 #
+msgid ""
+msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 00:00+0000\n"
