@@ -61,8 +61,5 @@ tests:
     - haskell-hello-world-template
     - base
     - tasty
-    - tasty-auto
     - tasty-hspec
     - tasty-hunit
-    - tasty-quickcheck
-    - tasty-smallcheck
