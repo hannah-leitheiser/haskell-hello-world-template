@@ -1,7 +1,7 @@
 import Test.Tasty
 import Test.Tasty.Hspec
 
-import qualified GreetWorldSpec
+import qualified HelloWorldSpec
 
 main :: IO ()
 main = do
