@@ -7,16 +7,9 @@ import Data.Text.I18n.Po
 import qualified Data.Text as T
 import System.Environment (lookupEnv)
 
-greetWorld :: IO ()
-greetWorld = do
+greetWorld :: String -> String
+greetWorld locale = 
   let localeDir = "resources/locale"
-
-  -- Try to get the system locale
-  maybeLocale <- lookupEnv "LANG"
-  let locale = case maybeLocale of
-                 Just loc -> takeWhile (/= '.') loc  -- Strip off any encoding info, e.g., ".UTF-8"
-                 Nothing  -> "en"  -- Default to "en" if locale is not found
-  
-  (l10n, _) <- getL10n localeDir
-  let message = T.unpack ( localize l10n (Locale (T.pack locale)) (gettext (T.pack "hello world") ) )
-  putStrLn (message )
+      (l10n, _) = getL10n localeDir
+      message = T.unpack (localize l10n (Locale (T.pack locale)) (gettext (T.pack "hello world")))
+  in message
