@@ -1,5 +1,6 @@
 import Data.Text.I18n
 import Data.Text.I18n.Po
+import qualified Data.Text as T
 
 main :: IO ()
 main = do
@@ -7,4 +8,4 @@ main = do
   
   (l10n, _) <- getL10n localeDir
   let message = localize l10n (Locale "en") (gettext "hello world")
-  putStrLn message
+  putStrLn (T.unpack message )
