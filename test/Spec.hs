@@ -1,5 +1,6 @@
 import Test.Tasty
 import Test.Tasty.Hspec
+import Test.Hspec
 import HelloWorld (greetWorld)
 
 main :: IO ()
