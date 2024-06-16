@@ -1,9 +1,10 @@
-module Main (main) where
-
 import Data.Text.I18n
-import System.Environment (getEnv)
-import Data.Text (Text, unpack)
+import Data.Text.I18n.Po
 
 main :: IO ()
 main = do
-  putStrLn $ "Hello World!"
+  let localeDir = "test/locale"
+  
+  (l10n, _) <- getL10n localeDir
+  let message = localize l10n (Locale "en") (gettext "hello world")
+  putLnStr message
