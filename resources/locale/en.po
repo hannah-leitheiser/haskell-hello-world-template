@@ -14,4 +14,4 @@
 "Language: en\n"
 
 msgid "hello world"
-msgstr "hello world"
+msgstr "Hello, World!"
