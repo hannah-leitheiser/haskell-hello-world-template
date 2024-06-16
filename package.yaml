@@ -60,6 +60,7 @@ tests:
     dependencies:
     - haskell-hello-world-template
     - base
+    - test-hspec
     - tasty
     - tasty-hspec
     - tasty-hunit
