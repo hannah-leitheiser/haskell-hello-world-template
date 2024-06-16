@@ -1,3 +1,5 @@
+import System.Environment (lookupEnv)
+
 import HelloWorld
 
 main :: IO ()
