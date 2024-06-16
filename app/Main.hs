@@ -1,6 +1,6 @@
 module Main (main) where
 
-import Text.I18n
+import Data.Text.I18n
 import System.Environment (getEnv)
 import Data.Text (Text, unpack)
 
