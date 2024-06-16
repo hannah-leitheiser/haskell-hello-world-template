@@ -1,4 +1,4 @@
-module GreetWorldSpec (spec) where
+module HelloWorldSpec (spec) where
 
 import Test.Hspec
 
